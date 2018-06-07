@@ -4546,21 +4546,21 @@
    && (!TARGET_SSE_MATH || TARGET_MIX_SSE_I387) \
    && flag_unsafe_math_optimizations)
 #define HAVE_lfloorsfsi2 (SSE_FLOAT_MODE_P (SFmode) && TARGET_SSE_MATH \
-   && !flag_trapping_math)
+   && (TARGET_SSE4_1 || !flag_trapping_math))
 #define HAVE_lceilsfsi2 (SSE_FLOAT_MODE_P (SFmode) && TARGET_SSE_MATH \
-   && !flag_trapping_math)
+   && (TARGET_SSE4_1 || !flag_trapping_math))
 #define HAVE_lfloorsfdi2 ((SSE_FLOAT_MODE_P (SFmode) && TARGET_SSE_MATH \
-   && !flag_trapping_math) && (TARGET_64BIT))
+   && (TARGET_SSE4_1 || !flag_trapping_math)) && (TARGET_64BIT))
 #define HAVE_lceilsfdi2 ((SSE_FLOAT_MODE_P (SFmode) && TARGET_SSE_MATH \
-   && !flag_trapping_math) && (TARGET_64BIT))
+   && (TARGET_SSE4_1 || !flag_trapping_math)) && (TARGET_64BIT))
 #define HAVE_lfloordfsi2 (SSE_FLOAT_MODE_P (DFmode) && TARGET_SSE_MATH \
-   && !flag_trapping_math)
+   && (TARGET_SSE4_1 || !flag_trapping_math))
 #define HAVE_lceildfsi2 (SSE_FLOAT_MODE_P (DFmode) && TARGET_SSE_MATH \
-   && !flag_trapping_math)
+   && (TARGET_SSE4_1 || !flag_trapping_math))
 #define HAVE_lfloordfdi2 ((SSE_FLOAT_MODE_P (DFmode) && TARGET_SSE_MATH \
-   && !flag_trapping_math) && (TARGET_64BIT))
+   && (TARGET_SSE4_1 || !flag_trapping_math)) && (TARGET_64BIT))
 #define HAVE_lceildfdi2 ((SSE_FLOAT_MODE_P (DFmode) && TARGET_SSE_MATH \
-   && !flag_trapping_math) && (TARGET_64BIT))
+   && (TARGET_SSE4_1 || !flag_trapping_math)) && (TARGET_64BIT))
 #define HAVE_isinfxf2 (TARGET_USE_FANCY_MATH_387 \
    && ix86_libc_has_function (function_c99_misc))
 #define HAVE_isinfsf2 (TARGET_USE_FANCY_MATH_387 \
