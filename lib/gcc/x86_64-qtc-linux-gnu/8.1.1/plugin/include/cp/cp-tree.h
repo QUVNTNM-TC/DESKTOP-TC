@@ -6180,6 +6180,7 @@ extern bool trivial_default_constructor_is_constexpr (tree);
 extern bool type_has_constexpr_default_constructor (tree);
 extern bool type_has_virtual_destructor		(tree);
 extern bool classtype_has_move_assign_or_move_ctor_p (tree, bool user_declared);
+extern bool classtype_has_non_deleted_move_ctor (tree);
 extern bool type_build_ctor_call		(tree);
 extern bool type_build_dtor_call		(tree);
 extern void explain_non_literal_class		(tree);
@@ -6827,9 +6828,9 @@ extern bool perform_or_defer_access_check	(tree, tree, tree,
 
 struct deferring_access_check_sentinel
 {
-  deferring_access_check_sentinel ()
+  deferring_access_check_sentinel (enum deferring_kind kind = dk_deferred)
   {
-    push_deferring_access_checks (dk_deferred);
+    push_deferring_access_checks (kind);
   }
   ~deferring_access_check_sentinel ()
   {
