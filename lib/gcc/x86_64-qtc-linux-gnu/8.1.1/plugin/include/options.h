@@ -1835,12 +1835,6 @@ extern int warn_unknown_pragmas;
 #define warn_unknown_pragmas global_options.x_warn_unknown_pragmas
 #endif
 #ifdef GENERATOR_FILE
-extern int warn_unsafe_loop_optimizations;
-#else
-  int x_warn_unsafe_loop_optimizations;
-#define warn_unsafe_loop_optimizations global_options.x_warn_unsafe_loop_optimizations
-#endif
-#ifdef GENERATOR_FILE
 extern int warn_unsuffixed_float_constants;
 #else
   int x_warn_unsuffixed_float_constants;
@@ -6603,7 +6597,7 @@ enum opt_code
   OPT_Wuninitialized = 423,                  /* -Wuninitialized */
   OPT_Wunknown_pragmas = 424,                /* -Wunknown-pragmas */
   /* OPT_Wunreachable_code = 425, */         /* -Wunreachable-code */
-  OPT_Wunsafe_loop_optimizations = 426,      /* -Wunsafe-loop-optimizations */
+  /* OPT_Wunsafe_loop_optimizations = 426, *//* -Wunsafe-loop-optimizations */
   OPT_Wunsuffixed_float_constants = 427,     /* -Wunsuffixed-float-constants */
   OPT_Wunused = 428,                         /* -Wunused */
   OPT_Wunused_but_set_parameter = 429,       /* -Wunused-but-set-parameter */
