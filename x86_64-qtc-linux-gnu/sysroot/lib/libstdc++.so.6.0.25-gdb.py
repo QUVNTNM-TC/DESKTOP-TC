@@ -19,7 +19,7 @@ import gdb
 import os
 import os.path
 
-pythondir = '/home/jenkins/workspace/QTC-Desktop/ivybridge/x-tools/x86_64-qtc-linux-gnu/share/gcc-8.1.1/python'
+pythondir = '/home/jenkins/workspace/QTC-Desktop/ivybridge/x-tools/x86_64-qtc-linux-gnu/share/gcc-8.2.1/python'
 libdir = '/home/jenkins/workspace/QTC-Desktop/ivybridge/x-tools/x86_64-qtc-linux-gnu/x86_64-qtc-linux-gnu/lib/../lib64'
 
 # This file might be loaded when there is no current objfile.  This
